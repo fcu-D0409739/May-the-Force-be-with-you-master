@@ -1,0 +1,294 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="play_toolbar.css">
+    <script src="jquery-3.2.1.js"></script>
+    <script src="jquery.cycle2.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .auto-style1 {
+            margin-right: 2px;
+        }
+		
+    </style>
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+ $("#coll").change(function(){
+ var day1_1 = "<div>武界部落人文生態巡禮→武界吊橋→舊武界壩→曲冰隧道→松林舊部落→親愛部落</div>";
+ var day1_2 = "<div> 曲冰部落巡禮→曲冰遺址</div>";
+ var day1_3 = "<div> 地利村達瑪巒部落→雙龍部落巡禮→黑黑王國→巴庫拉斯部落探索</div>";
+ var day2_1 = "<div>望鄉部落巡禮→乜寇豆類媽媽的故事→眺望東谷飛沙→獵人古道生態體驗</div>";
+ var day2_2 = "<div>東埔部落巡禮→羅娜部落巡禮→八通關古道生態體驗→東埔溫泉</div>";
+ var startTag;
+ var endTag;
+ var listType;
+ 
+	if(coll.value== 0){
+		$("#test").empty();
+		
+	}else if(coll.value== 1){
+		startTag = "<ol style='list-style-type:none'>";
+		endTag = "<ol>";
+		 
+		$("#test").empty();
+		for(var i=1 ; i<=3;i++){
+			switch(i){
+				case 1:
+					$("#test").append(startTag+'<li>第'+i+'天</li>'+day1_1+endTag);
+					break;
+				case 2:
+					$("#test").append(startTag+'<li>第'+i+'天</li>'+day1_2+endTag);
+					break;
+				case 3:
+					$("#test").append(startTag+'<li>第'+i+'天</li>'+day1_3+endTag);
+					break;
+			}
+			
+		}
+		
+	}else if(coll.value== 2){
+		startTag = "<ol style='list-style-type:none'>";
+		endTag = "<ol>";
+		
+		$("#test").empty();
+		for(var i=1 ; i<=3;i++){
+			switch(i){
+				case 1:
+					$("#test").append(startTag+'<li>第'+i+'天</li>'+day2_1+endTag);
+					break;
+				case 2:
+					$("#test").append(startTag+'<li>第'+i+'天</li>'+day2_2+endTag);
+					break;
+				
+			}
+			
+		}
+	}
+ })
+});
+</script>
+	
+	
+	
+
+	<div class="cycle-slideshow"
+        data-cycle-fx="scrollHorz"
+        data-cycle-speed="1000"
+        data-cycle-timeout="5000">
+        <img src="slider-1.jpg" />
+        <img src="slider-2.jpg" />
+        <img src="slider-3.jpg" />
+        <img src="slider-4.jpg" />
+    </div>
+	
+	
+
+	<div id="toolbar" name="工具列" class=jumbotron>
+
+
+        <img src="logo.jpg" id="logo">
+        <nav id="logo_div">
+            <a href="index.html" class="htoolbar">回首頁</a> |
+            <a href="food.html" class="htoolbar">美食區</a> |
+            <a href="video.html" class="htoolbar">影片區</a> |
+            <a href="play.html" class="htoolbar">導覽區</a>
+
+
+        </nav>
+
+        <nav id="lang" class="htoolbar">
+
+            <a href="" class="htoolbar">English</a> |
+                <a href="" class="htoolbar">日本語</a>
+
+
+        </nav>
+
+    </div>
+<div id="travel">
+	 <ul class="nav nav-tabs" >
+        
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">北部<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                
+                <li><a  data-toggle="tab" href="#north-day2">兩日遊</a></li>
+                
+            </ul>
+        </li>
+		
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">中部<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#middle-day3">三日遊</a></li>
+                <li><a data-toggle="tab" href="#middle-day2">兩日遊</a></li>
+                
+            </ul>
+        </li>
+		
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">東部<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#east-day3">三日遊</a></li>
+                <li><a data-toggle="tab" href="#east-day2">兩日遊</a></li>
+                
+            </ul>
+        </li>
+		
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">南部<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a data-toggle="tab" href="#south-day2">兩日遊</a></li>
+                <li><a data-toggle="tab" href="#south-day1">一日遊</a></li>
+                
+            </ul>
+        </li>
+	
+    </ul> 
+	<div class="tab-content">
+		<div id="north-day2" class="tab-pane fade in">
+            <h3>台灣山脊～遺世獨立部落行</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				崙埤泰雅生活館 →寒溪部落、寒溪神社、吊橋→樂水部落→太平山→遊翠峰湖→鳩之澤泡溫泉
+			</p>
+			<span class="day">Day 2</span>
+			<p class="day-route">
+				南澳部落→敏嘟奴泰雅工藝坊、納來麻谷工作坊→
+				南澳社區發展鞋會泰雅創意製鞋工坊→金岳部落→武塔部落→莎韻之路
+			</p>
+        </div>
+		
+		<div id="middle-day3" class="tab-pane ">
+            <h3>台灣山脊～玉山部落探索</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				武界部落人文生態巡禮→武界吊橋→舊武界壩→曲冰隧道→松林舊部落→親愛部落
+			</p>
+			<span class="day">Day 2</span>
+			<p class="day-route">
+				曲冰部落巡禮→曲冰遺址
+			</p>
+			<span class="day">Day 3</span>
+			<p class="day-route">
+				地利村達瑪巒部落→雙龍部落巡禮→黑黑王國→巴庫拉斯部落探索
+			</p>
+        </div>
+		
+		<div id="middle-day2" class="tab-pane ">
+            <h3>台灣山脊～玉山部落探索</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				望鄉部落巡禮→乜寇豆類媽媽的故事→眺望東谷飛沙→獵人古道生態體驗
+			</p>
+			<span class="day">Day 2</span>
+			<p class="day-route">
+				東埔部落巡禮→羅娜部落巡禮→八通關古道生態體驗→東埔溫泉
+			</p>
+        </div>
+		
+		<div id="east-day3" class="tab-pane ">
+            <h3>山與海的浪漫</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				台北車站→花蓮火車站→奇萊亞酒莊→花蓮市區半日遊→市區飯店
+			</p>
+			<span class="day">Day 2</span>
+			<p class="day-route">
+				飯店→池南部落→鯉魚潭→林田山→馬太鞍部落→飯店
+			</p>
+			<span class="day">Day 3</span>
+			<p class="day-route">
+				飯店→太巴塱部落→新社部落→磯崎海濱→芭崎瞭望台→花蓮火車站返程
+			</p>
+        </div>
+		
+		<div id="east-day2" class="tab-pane ">
+            <h3>來去花蓮當獵人</h3>
+            <span class="day">Day 1</span>
+				<p class="day-route">
+					台北車站→花蓮火車站→撒固兒部落→太魯閣風景區→市區飯店
+				</p>
+			<span class="day">Day 2</span>
+				<p class="day-route">
+					飯店→吉籟獵人學校→七星潭→花蓮火車站返程
+				</p>
+        </div>
+		
+		<div id="south-day2" class="tab-pane ">
+            <h3>屏北─琉璃禮讚</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				三地門(工藝步道)谷川大橋(全國最高橋墩座)→霧台(岩板巷、夜間生態觀察、觀星宿) 
+			</p>
+			<span class="day">Day 2</span>
+			<p class="day-route">
+				原住民文化園區(16族文化饗宴)→禮納里(臺灣普羅旺斯)→長治百合部落(88重建部落)→
+			</p>
+        </div>
+		
+		<div id="south-day1" class="tab-pane ">
+            <h3>屏南─山海全有味</h3>
+            <span class="day">Day 1</span>
+			<p class="day-route">
+				滿州沙漠綠寶石→旭海大草原→原住民海味餐→石門古戰場
+			</p>
+
+        </div>
+	</div>
+	
+</div>	
+<div class="leftBar">
+        <ul>
+            <li class="height"><a href="" class="underline">烹調</a></li>
+            <li><a href="" class="underline">風景</a></li>
+            <li><a href="" class="underline"></a></li>
+
+
+        </ul>
+
+    </div>
+
+<!--
+<div class="container">
+	<div id="travelbox" class=jumbotron>
+	<div id="travel">
+		<p>請選擇行程</p>
+		<select id="coll">
+		<option value="0" id="no">請選擇</option>
+		<option value="2">兩日遊</option>
+		<option value="1">三日遊</option>
+		</select>
+	</div>
+	<div id="plan"></div>
+	
+	<div id = "test"></div>
+	</div>
+	<div class="nature">
+        <img src="nature-1.jpg" id="nature-picture">
+        
+    </div>
+</div>	
+-->
+	<div id = "test"></div>
+	<div class="CmdBox">
+        <form method="post">
+            <label>Name:			
+                <br><input type="text" name="name" /><br>			
+            </label>
+			<br>
+            <label>Message:
+				<br>
+				<textarea cols="30" rows="10" name="comment"></textarea>
+				
+			</label><br>
+                
+			
+            <input type="submit" name="post" value="Post" />
+        </form>
+    </div>
+</body>
